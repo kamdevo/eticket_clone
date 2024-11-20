@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f1f1 !important;
+}
+
+nav {
+  padding: 10px 6rem !important;
+  background-color: #003366;
+  letter-spacing: 1px;
+  padding-bottom: 0 !important;
+}
+
+.btn:hover {
+  color: #ffc107 !important;
+  background-color: #135cb6 !important;
+}
+
+.nav-links {
+  width: 100%;
+  padding: 0 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #002b4b;
+  font-weight: bold;
+  letter-spacing: 0;
+
+  font-size: 0.9rem;
+}
+
+.first-group,
+.second-group {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.second-group {
+  background-color: #003366;
+  padding: 0;
+}
+
+.nav-links .first-group ul,
+.nav-links .second-group ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+
+.nav-links .first-group ul li,
+.nav-links .second-group ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links .first-group ul li a,
+.nav-links .second-group ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: background 0.3s ease;
+}
+
+.nav-links .first-group ul li a:hover,
+.nav-links .second-group ul li a:hover {
+  background: #fff;
+  color: #002b4b;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  padding: 0 6rem;
+  background-color: #002b4b;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.autoplay-progress {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #002b4b;
+}
+
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 10;
+  width: 90%;
+  height: 100%;
+  stroke-width: 7px;
+  stroke: rgb(166, 40, 40);
+  fill: none;
+  stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}
+
+.extra-info {
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.extra-info:hover {
+  background-color: #135cb6;
+  color: #ffc107;
+}
+
+.advertisement-section {
+  padding: 10px 6rem;
+}
+
+.extra-info .dropdown-menu {
+  color: #013266 !important;
+}
+
+.footer i {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+  transition: 0.3s ease;
+}
+
+.footer i:hover {
+  transform: scale(1.2);
+  color: #135cb6;
+}
+
+.card img {
+  transition: transform 0.2s ease;
+  object-fit: contain;
+}
+
+.card:hover img {
+  transform: scale(1.1) !important;
+}
+
+@media screen and (max-width: 1024px) {
+  nav {
+    padding: 10px 3rem !important;
+  }
+
+  .swiper-container {
+    padding: 0 3rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  nav {
+    padding: 10px 2rem !important;
+  }
+
+  .nav-links {
+    padding: 0 2rem;
+  }
+
+  .swiper-container {
+    padding: 0 2rem;
+  }
+  #nav-search-form {
+    display: none !important;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-collapse-links {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+
+  .nav-collapse-links .first-group ul,
+  .nav-collapse-links .second-group ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-colapse-icon {
+    display: block;
+    width: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    padding: 10px 1rem !important;
+  }
+
+  nav img {
+    display: flex;
+    max-width: 150px;
+  }
+
+  .swiper-container {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  #nav-user-form {
+    flex-direction: column;
+  }
+
+  #nav-user-form button {
+    font-size: 0.7rem;
+  }
+  .nav-links {
+    padding: 0 1rem;
+  }
+
+  .swiper-container {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .collapse-nav-links {
+    padding: 0 0.5rem;
+  }
+}

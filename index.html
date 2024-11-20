@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg d-flex flex-column gap-3">
+      <div class="container-fluid d-flex justify-content-between p-0">
+        <a class="navbar-brand" href="#">
+          <img src="/assets/logo.png" width="275" />
+        </a>
+
+        <form class="d-flex" id="nav-search-form" role="search">
+          <input
+            style="width: 230px"
+            class="form-control me-2 border-2 border-primary"
+            type="search"
+            placeholder="Busca artistas y/o eventos"
+            aria-label="Search"
+          />
+          <button
+            class="btn fw-bold button"
+            style="background-color: #135cb6; color: #fff; letter-spacing: 1px"
+            type="submit"
+          >
+            Buscar
+          </button>
+        </form>
+
+        <div id="nav-user-form" class="d-flex align-items-center">
+          <button
+            type="button"
+            class="fw-bold btn button px-3 me-2"
+            style="color: #fff; letter-spacing: 1px; background-color: #135cb6"
+          >
+            Inicia Sesión
+          </button>
+          <button
+            type="button"
+            class="fw-bold btn button me-3"
+            style="color: #fff; letter-spacing: 1px"
+          >
+            Regístrate
+          </button>
+        </div>
+      </div>
+      <button
+        class="navbar-toggler border-primary"
+        style="border: none; outline: none; background-color: #135cb6"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarButtonsExample"
+        aria-expanded="false"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+    <div class="nav-links">
+      <div class="first-group">
+        <ul>
+          <li><a href="#">Conciertos</a></li>
+          <li><a href="#">Deportes</a></li>
+          <li><a href="#">Teatro</a></li>
+          <li><a href="#">Culturales</a></li>
+          <li><a href="#">Comedia</a></li>
+          <li><a href="#">Familiares</a></li>
+          <li><a href="#">Congresos</a></li>
+          <li><a href="#">Festivales</a></li>
+        </ul>
+      </div>
+      <div class="second-group">
+        <ul>
+          <li><a href="#">Puntos de venta</a></li>
+          <li><a href="#">Ayuda</a></li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="collapse navbar-collapse py-3 d-flec flex-column gap-3"
+      style="background-color: #002b4b"
+      id="navbarButtonsExample"
+    >
+      <form
+        class="d-flex"
+        id="collpapse-nav-search-form nav-search-form"
+        style="justify-content: center; background-color: #002b4b"
+        role="search"
+      >
+        <input
+          style="width: 230px"
+          class="form-control me-2 border-2 border-primary"
+          type="search"
+          placeholder="Busca artistas y/o eventos"
+          aria-label="Search"
+        />
+        <button
+          class="btn fw-bold button"
+          style="background-color: #135cb6; color: #fff; letter-spacing: 1px"
+          type="submit"
+        >
+          Buscar
+        </button>
+      </form>
+      <div class="nav-collapse-links nav-links">
+        <div class="first-group">
+          <ul>
+            <li><a href="#">Conciertos</a></li>
+            <li><a href="#">Deportes</a></li>
+            <li><a href="#">Teatro</a></li>
+            <li><a href="#">Culturales</a></li>
+            <li><a href="#">Comedia</a></li>
+            <li><a href="#">Familiares</a></li>
+            <li><a href="#">Congresos</a></li>
+            <li><a href="#">Festivales</a></li>
+          </ul>
+        </div>
+        <div class="second-group">
+          <ul>
+            <li><a href="#">Puntos de venta</a></li>
+            <li><a href="#">Ayuda</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper-container">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="assets/banner-img-1.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/banner-img-2.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/banner-img-3.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/banner-img-4.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/banner-img-5.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/banner-img-6.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+        <div class="autoplay-progress">
+          <svg viewBox="0 0 48 48">
+            <circle cx="24" cy="24" r="20"></circle>
+          </svg>
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="w-full py-2 d-flex justify-content-center mt-1 gap-5"
+      style="background-color: #013266; color: #fff"
+    >
+      <div
+        class="extra-info d-flex gap-4 align-items-center"
+        class="dropdown-toggle"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <i style="font-size: 1.5rem" class="bx bxs-calendar"></i>
+        <strong>TODOS LOS EVENTOS</strong>
+        <i style="font-size: 0.8rem" class="bx bxs-down-arrow"></i>
+        <ul class="dropdown-menu" role="menu">
+          <li>
+            <a class="dropdown-item" href="#">CONCIERTOS</a>
+          </li>
+          <li><a class="dropdown-item" href="#">TEATRO</a></li>
+          <li><a class="dropdown-item" href="#">DEPORTES</a></li>
+          <li><a class="dropdown-item" href="#">CULTURALES</a></li>
+          <li><a class="dropdown-item" href="#">FAMILIARES</a></li>
+        </ul>
+      </div>
+      <div
+        class="extra-info d-flex gap-4 align-items-center"
+        class="dropdown-toggle"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <i style="font-size: 1.5rem" class="bx bxs-location-plus"></i>
+        <strong s>TODO COLOMBIA</strong>
+        <i style="font-size: 0.8rem" class="bx bxs-down-arrow"></i>
+        <ul class="dropdown-menu" role="menu">
+          <li>
+            <a class="dropdown-item" href="#">ANTIOQUIA</a>
+          </li>
+          <li><a class="dropdown-item" href="#">ATLANTICO</a></li>
+          <li><a class="dropdown-item" href="#">BOLIVAR</a></li>
+          <li><a class="dropdown-item" href="#">CALDAS</a></li>
+          <li><a class="dropdown-item" href="#">CUNDINAMARCA</a></li>
+          <li><a class="dropdown-item" href="#">SANTANDER</a></li>
+          <li><a class="dropdown-item" href="#">MAGDALENA</a></li>
+          <li><a class="dropdown-item" href="#">VALLE DEL CAUCA</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <section
+      class="container advertisement-section text-center d-flex flex-column gap-4"
+      style="background-color: #fff"
+    >
+      <span
+        style="
+          background-color: #013266;
+          padding: 7px;
+          font-weight: bold;
+          color: #fff;
+        "
+      >
+        EVENTOS EN TU CIUDAD
+      </span>
+      <div
+        class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-gap-5 col-gap-3"
+      >
+        <div class="col">
+          <div class="card">
+            <img
+              src="/assets/card-img-2.jpg"
+              class="card-img-top"
+              alt="green iguana"
+            />
+            <div class="card-body">
+              <h4 style="color: #484948; font-size: 1.2rem; font-weight: bold">
+                DUO MARGER
+              </h4>
+              <div
+                class="d-flex gap-2 flex-column"
+                style="border-top: 1px solid #00000035"
+              >
+                <span
+                  style="
+                    color: #000;
+                    text-decoration: none;
+                    font-size: 0.8rem;
+                    text-transform: capitalize;
+                  "
+                  type="button"
+                >
+                  BOGOTÁ
+                </span>
+                <button
+                  class="btn"
+                  style="
+                    background-color: #003366;
+                    color: #fff;
+                    font-weight: bold;
+                  "
+                  type="button"
+                >
+                  Ver Eventos
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="/assets/card-img-3.jpg"
+              class="card-img-top"
+              alt="green iguana"
+            />
+            <div class="card-body">
+              <h4 style="color: #484948; font-size: 1.2rem; font-weight: bold">
+                JAISON NEUTRA
+              </h4>
+              <div
+                class="d-flex gap-2 flex-column"
+                style="border-top: 1px solid #00000035"
+              >
+                <span
+                  style="
+                    color: #000;
+                    text-decoration: none;
+                    font-size: 0.8rem;
+                    text-transform: capitalize;
+                  "
+                  type="button"
+                >
+                  BOGOTÁ
+                </span>
+                <button
+                  class="btn"
+                  style="
+                    background-color: #003366;
+                    color: #fff;
+                    font-weight: bold;
+                  "
+                  type="button"
+                >
+                  Ver Eventos
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="/assets/card-img.jpg"
+              class="card-img-top"
+              alt="green iguana"
+            />
+            <div class="card-body">
+              <h4 style="color: #484948; font-size: 1.2rem; font-weight: bold">
+                VALE GARZON
+              </h4>
+              <div
+                class="d-flex gap-2 flex-column"
+                style="border-top: 1px solid #00000035"
+              >
+                <span
+                  style="
+                    color: #000;
+                    text-decoration: none;
+                    font-size: 0.8rem;
+                    text-transform: capitalize;
+                  "
+                  type="button"
+                >
+                  BOGOTÁ
+                </span>
+                <button
+                  class="btn"
+                  style="
+                    background-color: #003366;
+                    color: #fff;
+                    font-weight: bold;
+                  "
+                  type="button"
+                >
+                  Ver Eventos
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="/assets/card-img-4.jpg"
+              class="card-img-top"
+              alt="green iguana"
+            />
+            <div class="card-body">
+              <h4 style="color: #484948; font-size: 1.2rem; font-weight: bold">
+                ANDREA BOCELLI
+              </h4>
+              <div
+                class="d-flex gap-2 flex-column"
+                style="border-top: 1px solid #00000035"
+              >
+                <span
+                  style="
+                    color: #000;
+                    text-decoration: none;
+                    font-size: 0.8rem;
+                    text-transform: capitalize;
+                  "
+                  type="button"
+                >
+                  BOGOTÁ
+                </span>
+                <button
+                  class="btn"
+                  style="
+                    background-color: #003366;
+                    color: #fff;
+                    font-weight: bold;
+                  "
+                  type="button"
+                >
+                  Ver Eventos
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="/assets/card-img-3.jpg"
+              class="card-img-top"
+              alt="green iguana"
+            />
+            <div class="card-body">
+              <h4 style="color: #484948; font-size: 1.2rem; font-weight: bold">
+                JAISON NEUTRA
+              </h4>
+              <div
+                class="d-flex gap-2 flex-column"
+                style="border-top: 1px solid #00000035"
+              >
+                <span
+                  style="
+                    color: #000;
+                    text-decoration: none;
+                    font-size: 0.8rem;
+                    text-transform: capitalize;
+                  "
+                  type="button"
+                >
+                  BOGOTÁ
+                </span>
+                <button
+                  class="btn"
+                  style="
+                    background-color: #003366;
+                    color: #fff;
+                    font-weight: bold;
+                  "
+                  type="button"
+                >
+                  Ver Eventos
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="/assets/card-img.jpg"
+              class="card-img-top"
+              alt="green iguana"
+            />
+            <div class="card-body">
+              <h4 style="color: #484948; font-size: 1.2rem; font-weight: bold">
+                VALE GARZON
+              </h4>
+              <div
+                class="d-flex gap-2 flex-column"
+                style="border-top: 1px solid #00000035"
+              >
+                <span
+                  style="
+                    color: #000;
+                    text-decoration: none;
+                    font-size: 0.8rem;
+                    text-transform: capitalize;
+                  "
+                  type="button"
+                >
+                  BOGOTÁ
+                </span>
+                <button
+                  class="btn"
+                  style="
+                    background-color: #003366;
+                    color: #fff;
+                    font-weight: bold;
+                  "
+                  type="button"
+                >
+                  Ver Eventos
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="/assets/card-img-4.jpg"
+              class="card-img-top"
+              alt="green iguana"
+            />
+            <div class="card-body">
+              <h4 style="color: #484948; font-size: 1.2rem; font-weight: bold">
+                ANDREA BOCELLI
+              </h4>
+              <div
+                class="d-flex gap-2 flex-column"
+                style="border-top: 1px solid #00000035"
+              >
+                <span
+                  style="
+                    color: #000;
+                    text-decoration: none;
+                    font-size: 0.8rem;
+                    text-transform: capitalize;
+                  "
+                  type="button"
+                >
+                  BOGOTÁ
+                </span>
+                <button
+                  class="btn"
+                  style="
+                    background-color: #003366;
+                    color: #fff;
+                    font-weight: bold;
+                  "
+                  type="button"
+                >
+                  Ver Eventos
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="/assets/card-img-3.jpg"
+              class="card-img-top"
+              alt="green iguana"
+            />
+            <div class="card-body">
+              <h4 style="color: #484948; font-size: 1.2rem; font-weight: bold">
+                JAISON NEUTRA
+              </h4>
+              <div
+                class="d-flex gap-2 flex-column"
+                style="border-top: 1px solid #00000035"
+              >
+                <span
+                  style="
+                    color: #000;
+                    text-decoration: none;
+                    font-size: 0.8rem;
+                    text-transform: capitalize;
+                  "
+                  type="button"
+                >
+                  BOGOTÁ
+                </span>
+                <button
+                  class="btn"
+                  style="
+                    background-color: #003366;
+                    color: #fff;
+                    font-weight: bold;
+                  "
+                  type="button"
+                >
+                  Ver Eventos
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="/assets/card-img.jpg"
+              class="card-img-top"
+              alt="green iguana"
+            />
+            <div class="card-body">
+              <h4 style="color: #484948; font-size: 1.2rem; font-weight: bold">
+                VALE GARZON
+              </h4>
+              <div
+                class="d-flex gap-2 flex-column"
+                style="border-top: 1px solid #00000035"
+              >
+                <span
+                  style="
+                    color: #000;
+                    text-decoration: none;
+                    font-size: 0.8rem;
+                    text-transform: capitalize;
+                  "
+                  type="button"
+                >
+                  BOGOTÁ
+                </span>
+                <button
+                  class="btn"
+                  style="
+                    background-color: #003366;
+                    color: #fff;
+                    font-weight: bold;
+                  "
+                  type="button"
+                >
+                  Ver Eventos
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img
+              src="/assets/card-img-4.jpg"
+              class="card-img-top"
+              alt="green iguana"
+            />
+            <div class="card-body">
+              <h4 style="color: #484948; font-size: 1.2rem; font-weight: bold">
+                ANDREA BOCELLI
+              </h4>
+              <div
+                class="d-flex gap-2 flex-column"
+                style="border-top: 1px solid #00000035"
+              >
+                <span
+                  style="
+                    color: #000;
+                    text-decoration: none;
+                    font-size: 0.8rem;
+                    text-transform: capitalize;
+                  "
+                  type="button"
+                >
+                  BOGOTÁ
+                </span>
+                <button
+                  class="btn"
+                  style="
+                    background-color: #003366;
+                    color: #fff;
+                    font-weight: bold;
+                  "
+                  type="button"
+                >
+                  Ver Eventos
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div
+      class="container-fluid py-2 px-4 mt-5"
+      style="background-color: #1e2126; color: #fff"
+    >
+      <footer class="py-4">
+        <div class="row">
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Secciones</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a href="#" class="nav-link p-0">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link p-0">Conciertos</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link p-0">Deportes</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link p-0">Teatro</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link p-0">Culturales</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Secciones</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a href="#" class="nav-link p-0">Comedia</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link p-0">Familiares</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">Congresos</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">Festivales</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0">About</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-5 offset-md-1 mb-3">
+            <form
+              data-np-autofill-form-type="subscribe"
+              data-np-checked="1"
+              data-np-watching="1"
+            >
+              <h5>Suscribete a nuestro correo para enterarte de todo 🥁</h5>
+              <p>
+                Te enviaremos notificaciones de los próximos eventos en COLOMBIA
+                🎬
+              </p>
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden"
+                  >Email address</label
+                >
+                <input
+                  id="newsletter1"
+                  type="text"
+                  class="form-control"
+                  placeholder="correo@email.com"
+                  data-np-autofill-field-type="email"
+                  data-np-uid="a8a92470-2dd8-46ce-8225-943de90b9896"
+                />
+                <button class="btn btn-primary" type="button">
+                  Suscribete
+                </button>
+                <nordpass-icon
+                  data-np-uid="a8a92470-2dd8-46ce-8225-943de90b9896"
+                  style="all: initial !important"
+                ></nordpass-icon>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div
+          class="footer d-flex flex-column align-items-center py-3 my-4 border-top"
+        >
+          <p>
+            © 2024 :: eticket :: Todos los Derechos Reservados ::
+            https://www.eticket.co/
+          </p>
+          <ul class="list-unstyled d-flex">
+            <li class="ms-3">
+              <a class="link-body-emphasis" href="#"
+                ><i class="bx bxl-twitter"></i
+              ></a>
+            </li>
+            <li class="ms-3">
+              <a class="link-body-emphasis" href="#"
+                ><i class="bx bxl-instagram-alt"></i
+              ></a>
+            </li>
+            <li class="ms-3">
+              <a class="link-body-emphasis" href="#"
+                ><i class="bx bxl-facebook-circle"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
